@@ -1,4 +1,7 @@
 # Project2
+Link to proposal document:https://docs.google.com/document/d/1WKpxvx1ruE4ZMyjaq1GBuiWMLHYcRxBEmqH7vMIGC7Y/edit?usp=sharing  
+
+
 Extract 
 Data sources extracting from
 https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset?select=IMDb+movies.csv 
