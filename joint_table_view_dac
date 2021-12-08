@@ -1,0 +1,16 @@
+DROP VIEW IF EXISTS joint_table;
+
+Create View joint_table As
+Select imdb_rating.original_title as title, imdb_rating.year as imdb_year, rt_rating.original_release_date as rt_date, imdb_rating.avg_vote as imdb_rating, rt_rating.tomatometer_rating as rt_critic_rating, rt_rating.audience_rating as rt_audience_rating
+from imdb_rating join rt_rating on lower(imdb_rating.original_title) = lower(rt_rating.movie_title)
+Order By year Desc, original_release_date Desc;
+
+select count(*) from joint_table;
+
+select * from joint_table where title like 'Zombieland%';
+
+select * from joint_table where title like '%Star Wars%';
+
+select * from joint_table where title = 'A Star Is Born';
+
+select * from joint_table where title = 'A Star Is Born' and imdb_year = date_part('year',rt_date);

@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS imdb_rating;
+
+CREATE TABLE imdb_rating (
+	imdb_title_id VarChar,
+	title VarChar,
+	original_title VarChar,
+	year Int,
+	date_published VarChar,
+	genre VarChar,
+	duration Int,
+	country VarChar,
+	language VarChar,
+	director VarChar,
+	writer VarChar,
+	production_company VarChar,
+	actors VarChar,
+	description VarChar,
+	avg_vote Float,
+	votes Int,
+	budget VarChar,
+	usa_gross_income VarChar,
+	worlwide_gross_income VarChar,
+	metascore Int,
+	reviews_from_users Int,
+	reviews_from_critics Int
+);
+
+select * from imdb_rating limit 20;

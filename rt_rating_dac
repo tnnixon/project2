@@ -1,0 +1,29 @@
+DROP TABLE IF EXISTS rt_rating;
+
+CREATE TABLE rt_rating (
+	rotten_tomatoes_link VarChar,
+	movie_title VarChar,
+	movie_info VarChar,
+	critics_consensus VarChar,
+	content_rating VarChar,
+	genres VarChar,
+	directors VarChar,
+	authors VarChar,
+	actors VarChar,
+	original_release_date Date,
+	streaming_release_date Date,
+	runtime Int,
+	production_company VarChar,
+	tomatometer_status VarChar,
+	tomatometer_rating Int,
+	tomatometer_count Int,
+	audience_status VarChar,
+	audience_rating Int,
+	audience_count Int,
+	tomatometer_top_critics_count Int,
+	tomatometer_fresh_critics_count Int,
+	tomatometer_rotten_critics_count Int
+);
+
+Select * from rt_rating limit 20;
+
