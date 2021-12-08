@@ -1,27 +1,54 @@
-# Project2
-Link to proposal document:https://docs.google.com/document/d/1WKpxvx1ruE4ZMyjaq1GBuiWMLHYcRxBEmqH7vMIGC7Y/edit?usp=sharing  
+<h1> Proposal Link </h1>
+ <br>
+ https://docs.google.com/document/d/1WKpxvx1ruE4ZMyjaq1GBuiWMLHYcRxBEmqH7vMIGC7Y/edit?usp=sharing
+ <br>
+ 
+ <h1> Data Sources </h1>
+ <b> IMDB Data </b> <br>
+https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset?select=IMDb+movies.csv <br>
+<b> Rotten Tomatoes Ratings </b> <br>
+https://www.kaggle.com/yazeidalqahtani/rotten-tomato-movie-reviwe <br>
+<b> IMDB Top 250 rated Movies </b> <br>
+https://www.imdb.com/chart/top/?ref_=nv_mv_250 <br>
 
+<h1> Pre-Requisites </h1> <br>
+  a) SQLite DB <br>
+  b) Extract the files in "Raw_Data.zip" and place them in the folder "Raw_Data". This folder should be in the same path as IPYNB files. <br>
+      Due to Github Size restrictions all the files are not uploaded to the provided "Raw_Data" folder.
+  
+<h1> ETL Code </h1> <br>
+Execute the below IPYNB files to generate movies_db.sqllite Database file.<br>
+  a) movies.ipynb <br>
+  b) names.ipynb <br>
+  c) movie_names.ipynb <br>
+  d) ratings_dac.ipynb <br>
+  e) imdb_250_scraper.ipynb <br>
 
-Extract 
-Data sources extracting from
-https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset?select=IMDb+movies.csv 
-Imdb movies 
-Imdb ratings 
-https://www.kaggle.com/yazeidalqahtani/rotten-tomato-movie-reviwe 
-Web scraping table from https://www.imdb.com/chart/top/?ref_=nv_mv_250 
+<h1> Database Tables List</h1><br>
+  1) movies - Contains list of Movies from IMDB. <br>
+  2) names - Contains list of actors, actresses, directors, writers, producers and others invloved in film making.<br>
+  3) movie_names - This table depicts many-to-many relationship between movies and names. <br>
+  4) ratings - This has Rotten Tomatoes ratings for the movies in movies table. Not all movies have ratings in rotten tomatoes. <br>
+  5) imdb_top_250_movies - Contains list of top 250 movies based on IMDB list.
 
-Transform 
-Transform data such that datasets can be used for: 
-Comparing ratings 
-Clean up columns 
-Imdb movies 
-Imdb ratings 
-Rotten tomato 
-Join tables (Imdb movies, imdb ratings, rotten tomatoes) 
-Looking at the top 250 movies (join info from web scraping + imdb table)
-Join previous table with the results of web scraping (Venkatesh) 
-Join on name of movie 
+<h1> Sample DB Queries</h1> </br>
+ <p> select * from movies limit 100
 
-Load (SQL Postgres) 
-Table of combined ratings 
-Table of combined ratings for top 250
+select * from names limit 100
+
+select * from imdb_top_250_movies
+
+select * from movie_names limit 100 
+
+ select * from ratings limit 100
+
+--Details of top 250 IMDB rated movies<br>
+select m.* from imdb_top_250_movies t250,movies m 
+where t250.title=m.imdb_title_id
+
+--IMDB 250 movies Rotten Tomato ratings<br>
+select r.imdb_rating,r.tomatometer_rating, m.* from imdb_top_250_movies t250,movies m ,ratings r
+where t250.title=m.imdb_title_id and m.imdb_title_id=r.imdb_title_id
+</p>
+ <p> </p>
+
