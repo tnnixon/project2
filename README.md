@@ -5,9 +5,9 @@
  
  <h1> Data Sources </h1>
  <b> IMDB Data </b> <br>
-https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset?select=IMDb+movies.csv <br>
+https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset <br>
 <b> Rotten Tomatoes Ratings </b> <br>
-https://www.kaggle.com/yazeidalqahtani/rotten-tomato-movie-reviwe <br>
+https://www.kaggle.com/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset?select=rotten_tomatoes_movies.csv <br>
 <b> IMDB Top 250 rated Movies </b> <br>
 https://www.imdb.com/chart/top/?ref_=nv_mv_250 <br>
 
