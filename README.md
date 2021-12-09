@@ -47,7 +47,7 @@ select m.* from imdb_top_250_movies t250,movies m
 where t250.title=m.imdb_title_id
 
 --IMDB 250 movies Rotten Tomato ratings<br>
-select r.imdb_rating,r.tomatometer_rating, m.* from imdb_top_250_movies t250,movies m ,ratings r
+select r.imdb_ratings,r.tomatometer_rating, m.* from imdb_top_250_movies t250,movies m ,ratings r
 where t250.title=m.imdb_title_id and m.imdb_title_id=r.imdb_title_id
 </p>
  <p> </p>
