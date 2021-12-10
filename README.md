@@ -22,8 +22,8 @@ Execute the below IPYNB file to generate movies_db.sqllite database file.<br>
 
 <h1> Database Tables List</h1><br>
   1) movies - Contains list of movies from IMDB. <br>
-  2) names - Contains list of actors, actresses, directors, writers, producers and others invloved in film making.<br>
-  3) movie_names - This table depicts many-to-many relationship between movies and names. <br>
+  2) cast_and_crew - Contains list of actors, actresses, directors, writers, producers and others invloved in film making.<br>
+  3) actors - This table depicts many-to-many relationship between movies and names. <br>
   4) ratings - This has Rotten Tomatoes ratings for the movies in movies table. Not all movies have ratings in rotten tomatoes. <br>
   5) imdb_top_250_movies - Contains list of top 250 movies based on IMDB list.
 
