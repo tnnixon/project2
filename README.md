@@ -34,21 +34,23 @@ Execute the below IPYNB files to generate movies_db.sqllite Database file.<br>
 <h1> Sample DB Queries</h1> </br>
  <p> select * from movies limit 100
 
-select * from names limit 100
+select * from movies limit 100
+
+select * from actors limit 100
 
 select * from imdb_top_250_movies
 
-select * from movie_names limit 100 
+select * from cast_and_crew limit 100
 
- select * from ratings limit 100
+select * from ratings limit 100
 
---Details of top 250 IMDB rated movies<br>
-select m.* from imdb_top_250_movies t250,movies m 
-where t250.title=m.imdb_title_id
+--Details of top 250 IMDB rated movies
+select m.* from imdb_top_250_movies t250,movies m where t250.title=m.imdb_title_id
 
---IMDB 250 movies Rotten Tomato ratings<br>
-select r.imdb_ratings,r.tomatometer_rating, m.* from imdb_top_250_movies t250,movies m ,ratings r
+--IMDB 250 movies Rotten Tomato ratings
+select r.imdb_ratings,r.tomatometer_rating, m.* from imdb_top_250_movies t250,movies m ,ratings r 
 where t250.title=m.imdb_title_id and m.imdb_title_id=r.imdb_title_id
+
 </p>
  <p> </p>
 
