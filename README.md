@@ -18,11 +18,7 @@ https://www.imdb.com/chart/top/?ref_=nv_mv_250 <br>
   
 <h1> ETL Code </h1> <br>
 Execute the below IPYNB files to generate movies_db.sqllite Database file.<br>
-  a) movies.ipynb <br>
-  b) names.ipynb <br>
-  c) movie_names.ipynb <br>
-  d) ratings_dac.ipynb <br>
-  e) imdb_250_scraper.ipynb <br>
+  a) Combined_Project2_updated.ipynb <br>
 
 <h1> Database Tables List</h1><br>
   1) movies - Contains list of Movies from IMDB. <br>
