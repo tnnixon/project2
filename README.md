@@ -13,15 +13,15 @@ https://www.imdb.com/chart/top/?ref_=nv_mv_250 <br>
 
 <h1> Pre-Requisites </h1> <br>
   a) SQLite DB <br>
-  b) Extract the files in "Raw_Data.zip" and place them in the folder "Raw_Data". This folder should be in the same path as IPYNB files. <br>
+  b) Extract the files in "Raw_Data.zip" and place them in the folder "Raw_Data". This folder should be in the same path as IPYNB file. <br>
       Due to Github Size restrictions all the files are not uploaded to the provided "Raw_Data" folder.
   
 <h1> ETL Code </h1> <br>
-Execute the below IPYNB files to generate movies_db.sqllite Database file.<br>
+Execute the below IPYNB file to generate movies_db.sqllite database file.<br>
   a) Combined_Project2_updated.ipynb <br>
 
 <h1> Database Tables List</h1><br>
-  1) movies - Contains list of Movies from IMDB. <br>
+  1) movies - Contains list of movies from IMDB. <br>
   2) names - Contains list of actors, actresses, directors, writers, producers and others invloved in film making.<br>
   3) movie_names - This table depicts many-to-many relationship between movies and names. <br>
   4) ratings - This has Rotten Tomatoes ratings for the movies in movies table. Not all movies have ratings in rotten tomatoes. <br>
